@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(14, 16, 15);
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+@font-face {
+    font-family: Blockblueprint;
+    src: url(./CodeDoc/src/assets/fonts/Blockblueprint-LV7z5.ttf);
+}

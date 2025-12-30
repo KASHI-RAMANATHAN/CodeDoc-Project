@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CodeDoc | Conversions</title>
+        <style>
+            body{
+                background-color: rgb(14, 16, 15);
+                margin: 0;
+            }
+            p{
+                margin: 0;
+            }
+            @font-face {
+                font-family: Blockblueprint;
+                src: url(./CodeDoc/src/assets/fonts/Blockblueprint-LV7z5.ttf);
+            }
+            .process-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                /* padding: 3rem 3rem; */
+                padding-top: 48px;
+                padding-bottom: 20px;
+                padding-left: 48px;
+                padding-right: 48px;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+            }
+            .right-pane,
+            .editor-pane{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            .workspace{
+                width: 500px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(255, 252 , 225);
+                height: 600px;
+                border-radius: 41px;
+                box-sizing: border-box;
+            }
+            .demo-live-button,
+            .convert-button{
+                color: black;
+                background-color: rgb(255, 252 , 225);
+                border-radius: 11px;
+                font-size: 28px;
+                font-family: "Blockblueprint";
+                width: 100%;
+                max-width: 450px;
+                padding: 4px 8px;
+                border: none;
+                cursor: pointer;
+            }
+            .demo-live-button{
+                background-color: rgb(97, 170, 101);
+                color: rgb(255, 252 , 225);
+            }
+            .demo-live{
+                width: 600px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(255, 252 , 225);
+                height: 600px;
+                border-radius: 41px;
+                box-sizing: border-box;
+            }
+            .editor-heading{
+                font-family: "Blockblueprint";
+                font-size: 35px;
+                color: rgb(255, 252 , 225);
+            }
+        </style>
+    </head>
+    <body>
+        <div class= "process-container">
+            <div class = "editor-pane">
+                <p class="editor-heading">Editor</p>
+                <div class="workspace"></div>
+                <button class="convert-button">Convert</button>
+            </div>
+            <div class="right-pane">
+                <p class="editor-heading">Doc/Live</p>
+                <div class = "demo-live"></div>
+                <button class="demo-live-button">Doc/Live</button>
+            </div>
+        </div>
+    </body>
+</html>
