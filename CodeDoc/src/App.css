@@ -38,16 +38,36 @@
     width: 100%;
     max-width: 450px;
     padding: 4px 8px;
-    border: none;
+    border-style: solid;
+    border-color:rgb(255, 252 , 225);
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-width 0.1s;
 }
 .Doc-button{
     background-color: rgb(97, 170, 101);
     color: rgb(255, 252 , 225);
+    border-color: rgb(97, 170, 101);
+    transition: background-color 0.3s, color 0.3s, border-width 0.1s;
+}
+.Doc-button:hover{
+  background-color: rgb(14,16,15);
+  color: rgb(97, 170, 101);
+  border-color:rgb(97, 170, 101);
 }
 .Live-button{
     background-color: rgb(255, 135, 9);
     color: rgb(255, 252 , 225);
+    border-color: rgb(255, 135, 9);
+}
+.Live-button:hover{
+  background-color: rgb(14,16,15);
+  color: rgb(255, 135, 9);
+  border-color:rgb(255, 135, 9);
+}
+.convert-button:hover{
+  background-color: rgb(14,16,15);
+  color: rgb(255, 252 , 225);
+  border-color: rgb(255, 252 , 225);
 }
 .demo-live{
     width: 600px;

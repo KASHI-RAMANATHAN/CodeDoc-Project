@@ -1,9 +1,9 @@
 export function EditorPane(){
     return(
-        <div class = "editor-pane">
-            <p class="editor-heading">Editor</p>
-            <div class="workspace"></div>
-            <button class="convert-button">Convert</button>
+        <div className = "editor-pane">
+            <p className="editor-heading">Editor</p>
+            <div className="workspace"></div>
+            <button className="convert-button">Convert</button>
         </div>
     )
 }
