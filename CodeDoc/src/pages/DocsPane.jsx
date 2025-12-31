@@ -42,7 +42,7 @@ export function DocsPane({ value }) {
   if (!c_Info) {
     return (
       <div style={{ padding: "2rem", color: "#A1A1AA" }}>
-        <p>Paste a React component in the editor to see its docs here 👀</p>
+        <p>Paste a React component in the editor to see its docs here</p>
       </div>
     );
   }
@@ -50,11 +50,11 @@ export function DocsPane({ value }) {
   // Main docs view
   return (
     <div style={{ padding: "2rem", color: "#FFFCE1" }}>
-      <h2 style={{ marginBottom: "1.5rem" }}>
+      <h2 style={{ marginBottom: "1.5rem" , fontFamily: "Blockblueprint"}}>
         Component: <strong>{c_Info.name}</strong>
       </h2>
 
-      <h3 style={{ margin: "1.5rem 0 1rem" }}>Props</h3>
+      <h3 style={{ margin: "1.5rem 0 1rem", fontFamily: "Blockblueprint" }}>Props</h3>
 
       {c_Info.props.length === 0 ? (
         <p style={{ color: "#A1A1AA", fontStyle: "italic" }}>
@@ -72,10 +72,10 @@ export function DocsPane({ value }) {
         >
           <thead>
             <tr style={{ backgroundColor: "#1e1e1e" }}>
-              <th style={{ padding: "12px", textAlign: "left", borderBottom: "1px solid #333" }}>
+              <th style={{ padding: "12px", textAlign: "left", borderBottom: "1px solid #333", fontFamily: "Blockblueprint" }}>
                 Prop Name
               </th>
-              <th style={{ padding: "12px", textAlign: "left", borderBottom: "1px solid #333" }}>
+              <th style={{ padding: "12px", textAlign: "left", borderBottom: "1px solid #333", fontFamily: "Blockblueprint" }}>
                 Default Value
               </th>
             </tr>
