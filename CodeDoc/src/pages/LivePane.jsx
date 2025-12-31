@@ -9,7 +9,7 @@ export function LivePane({ value }) {
     if (!value || !value.trim()) {
         return (
             <div style={{ padding: "32px", color: "#A1A1AA", textAlign: "center" }}>
-                <p>Paste a component and switch to Live mode to see it rendered! 🚀</p>
+                <p>Paste a component and switch to Live mode to see it rendered!</p>
             </div>
         );
     }

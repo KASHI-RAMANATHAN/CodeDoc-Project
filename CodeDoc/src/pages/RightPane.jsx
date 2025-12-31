@@ -14,7 +14,11 @@ export function RightPane({value}){
     return(
         <div className="right-pane">
             <p className="editor-heading">{`${doc}-Mode`}</p>
-            <div className = "demo-live">{doc === "Doc"? <DocsPane value = {value}/>:(
+            <div className = "demo-live">{doc === "Doc"? (
+                <div className="docmode-container">
+                    <DocsPane value = {value}/>
+                </div>
+            ):(
                 <div className="livemode-container">
                     <LivePane value = {value}/>
                 </div>

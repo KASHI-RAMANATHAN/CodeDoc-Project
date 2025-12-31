@@ -85,13 +85,12 @@
     font-size: 35px;
     color: rgb(255, 252 , 225);
 }
-.liveMode-container {
-  height: 480px;         /*adjust for your design*/
-  max-height: 600px;
-  display: flex;
-  overflow-y: auto;       /* page scroll lives here */
-}
 
+.docmode-container,
+.liveMode-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 135, 9) transparent;
+}
 .liveMode-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -105,7 +104,3 @@
   border-radius: 999px;                 
 }
 
-.liveMode-container {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(255, 135, 9) transparent;
-}
