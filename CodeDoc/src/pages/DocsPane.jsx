@@ -41,16 +41,15 @@ export function DocsPane({ value }) {
 
   // Error state
   if (error) {
-    return <div style={{ padding: "2rem", color: "#ff6b6b" }}>Error: {error}</div>;
+    return <div className="parse_error">Error: {error}</div>;
   }
 
   // Empty state
   if (!info || info.name === "No component found") {
-    return <div style={{ padding: "2rem", color: "#A1A1AA", fontFamily:"Blockblueprint" }}>Paste a component to see docs</div>;
+    return <div className="msg-if-empty">Paste a component to see docs</div>;
   }
 
-  // --- HUMANIZED MARKDOWN GENERATION ---
-  // Instead of a giant complex template literal, we build it step-by-step
+  //markdown
   let markdown = `# ${info.name}\n\n`;
   
   if (info.description) {
@@ -89,7 +88,7 @@ export function DocsPane({ value }) {
           <Text style={pdfStyles.section}>{info.description}</Text>
         )}
         
-        <Text style={{ marginBottom: 10, fontWeight: "bold" }}>Props List:</Text>
+        <Text className = "props-list-heading">Props List:</Text>
         
         <View style={pdfStyles.table}>
           <View style={pdfStyles.tableRow}>
@@ -111,26 +110,26 @@ export function DocsPane({ value }) {
   );
 
   return (
-    <div style={{ padding: "32px", color: "#FFFCE1", height: "100%", display: "flex", flexDirection: "column" }}>
-      <div style={{ flex: 1, overflowY: "auto" }}>
-        <h2 style={{ marginBottom: "1rem", fontFamily: "Blockblueprint"}}>
-          Component: <span style={{ color: "#FFDE59", fontFamily: "Blockblueprint" }}>{info.name}</span>
+    <div className="entire-doc-content">
+      <div className="doc-content">
+        <h2 className="component-heading">
+          Component: <span className="component-name">{info.name}</span>
         </h2>
 
         {/* Description Box */}
         {info.description ? (
-          <div style={{ background: "#111", padding: "1.5rem", borderRadius: "12px", marginBottom: "2rem", border: "1px solid #333" }}>
+          <div className="description-div">
             <p style={{ margin: 0 }}>{info.description}</p>
           </div>
         ) : (
-          <p style={{ color: "#A1A1AA", marginBottom: "2rem" }}>
+          <p className="no-description-text">
             // No description found. Use JSDoc to add one!
           </p>
         )}
 
-        <h3 style={{ margin: "2rem 0 1rem", fontFamily: "Blockblueprint"}}>Props Table</h3>
+        <h3 className="props-table-heading">Props Table</h3>
         {/* Simple Table structure */}
-        <div style={{ background: "#111", borderRadius: "8px", padding: "1rem" }}>
+        <div className="table-background">
            {/* You can re-insert your actual <table> here, but the props are now ready */}
            {info.props.length > 0 ? (
              info.props.map(p => (
@@ -144,8 +143,8 @@ export function DocsPane({ value }) {
            )}
         </div>
 
-        <h3 style={{ margin: "2rem 0 1rem", fontFamily:"Blockblueprint"}}>Usage Example</h3>
-        <pre style={{ background: "#000", padding: "1rem", borderRadius: "8px", border: "1px solid #333" }}>
+        <h3 className=".usage-example-text">Usage Example</h3>
+        <pre className="usage-example-block">
           <code>
             &lt;{info.name} {propExample.trim()} /&gt;
           </code>
@@ -153,20 +152,20 @@ export function DocsPane({ value }) {
       </div>
 
       {/* Action Buttons */}
-      <div style={{ marginTop: "2rem", display: "flex", gap: "1rem" }}>
+      <div className="action-buttons">
         <button
           onClick={() => {
             navigator.clipboard.writeText(markdown);
             alert("Markdown copied to clipboard!"); // Very 'student' way to handle feedback
           }}
-          style={{ padding: "12px 20px", background: "#4a90e2", color: "white", border: "none", borderRadius: "8px", cursor: "pointer", fontFamily: "Blockblueprint" }}
+          className="markdown-button"
         >
           Copy Markdown
         </button>
 
         <PDFDownloadLink document={<PDFDoc />} fileName={`${info.name}-docs.pdf`}>
             <button
-              style={{ padding: "12px 20px", background: "#e67e22", color: "white", border: "none", borderRadius: "8px", cursor: "pointer", fontFamily: "Blockblueprint" }}
+              className="download-button"
             >
               Download PDF
             </button>

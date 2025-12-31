@@ -44,3 +44,89 @@
 .docs-table tbody tr:hover td {
   border-color: var(--docs-line);
 }
+.parse_error{
+  padding: 32px;
+  color: #ff6b6b;
+}
+.msg-if-empty{
+  padding: 32px;
+  color: #A1A1AA; 
+  font-family:"Blockblueprint"
+}
+.props-list-heading{
+  margin-bottom: 10;
+  font-weight: bold;
+}
+.component-heading{
+  margin-bottom: 16px; 
+  font-family: "Blockblueprint"
+}
+.component-name{
+  color: #FFDE59;
+  font-family: "Blockblueprint";
+}
+.doc-content{
+  flex: 1; 
+  overflow-y: auto;
+}
+.entire-doc-content{
+  padding: 32px; 
+  color: #FFFCE1;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+}
+.description-div{
+  background: #111;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border: 1px solid #333;
+}
+.no-description-text{
+  color: #A1A1AA;
+  margin-bottom: 32px;
+}
+.props-table-heading{
+  margin: 32px 0 16px;
+  font-family: "Blockblueprint";
+}
+.table-background{
+  background: #111;
+  border-radius: 8px;
+  padding: 16px;
+}
+.usage-example-text{
+  margin: 32px 0 16px;
+  font-family: "Blockblueprint";
+}
+.usage-example-block{
+  background: #000;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow: auto;
+}
+.action-buttons{
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+.markdown-button{
+  padding: 12px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Blockblueprint"
+}
+.download-button{
+  padding: 12px 20px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Blockblueprint"
+}
