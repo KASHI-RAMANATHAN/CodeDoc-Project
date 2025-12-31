@@ -26,6 +26,8 @@
     height: 600px;
     border-radius: 41px;
     box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 15px;
 }
 .Doc-button,
 .Live-button,

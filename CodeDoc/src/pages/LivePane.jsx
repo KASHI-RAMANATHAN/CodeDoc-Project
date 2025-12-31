@@ -4,6 +4,5 @@ export function LivePane(){
         <div className='button-wrapper'>
             <button className="Live-button">Preview Button</button>
         </div>
-        // <button className="Live-button">Preview Button</button>
     )
 }
