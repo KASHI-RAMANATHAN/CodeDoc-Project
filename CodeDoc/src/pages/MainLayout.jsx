@@ -3,11 +3,11 @@ import { RightPane } from "./RightPane"
 import { useState } from "react"
 export function MainLayout(){
     const [value, set_Value] = useState(
-        `function Button({ label = "Click me" }) {
-            return <button>{label}</button>;
-        }
+    `function Button({ label = "Click me" }) {
+        return <button>{label}</button>;
+    }
 
-        export default Button;`
+    export default Button;`
     );
 
     return(

@@ -85,3 +85,27 @@
     font-size: 35px;
     color: rgb(255, 252 , 225);
 }
+.liveMode-container {
+  height: 480px;         /*adjust for your design*/
+  max-height: 600px;
+  display: flex;
+  overflow-y: auto;       /* page scroll lives here */
+}
+
+.liveMode-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.liveMode-container::-webkit-scrollbar-track {
+  background: transparent;              
+}
+
+.liveMode-container::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 135, 9);   
+  border-radius: 999px;                 
+}
+
+.liveMode-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 135, 9) transparent;
+}

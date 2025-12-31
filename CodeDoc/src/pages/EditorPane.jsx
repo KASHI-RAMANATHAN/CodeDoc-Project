@@ -29,7 +29,7 @@ export function EditorPane({value, set_Value}){
                     defaultLanguage="javascript" 
                     theme="codoc-dark"
                     beforeMount={handleBeforeMount}
-                    defaultValue={value}
+                    value={value}
                     onChange={saveChanges}
                 />
             </div>
