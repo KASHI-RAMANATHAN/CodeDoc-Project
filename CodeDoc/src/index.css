@@ -11,3 +11,7 @@ p{
     margin: 0;
     font-family: "Blockblueprint";
 }
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url(/CodeDoc/public/fonts/PressStart2P-Regular.ttf);
+}

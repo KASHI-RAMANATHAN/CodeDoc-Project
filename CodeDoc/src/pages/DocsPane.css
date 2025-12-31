@@ -1,49 +1,3 @@
-:root {
-  --docs-line: rgb(97, 170, 101);
-  --docs-bg-hover: rgba(255, 252, 225, 0.08); /* subtle fill on hover */
-  --docs-text: rgb(97, 170, 101);
-}
-
-.docs-table-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.docs-table {
-  border-collapse: collapse;
-  min-width: 70%;
-  max-width: 90%;
-  background-color: transparent;
-  color: var(--docs-text);
-  font-size: 0.9rem;
-}
-
-.docs-table th,
-.docs-table td {
-  border: 1px solid var(--docs-line);
-  padding: 0.6rem 1rem;
-  text-align: left;
-}
-
-.docs-table thead th {
-  font-weight: 600;
-}
-
-.docs-table tbody tr {
-  transition: background-color 0.18s ease, color 0.18s ease;
-}
-
-.docs-table tbody tr:hover {
-  background-color: var(--docs-bg-hover);           /* row fill appears */
-  color: white;                                   /* dark text on hover */
-}
-
-.docs-table tbody tr:hover td {
-  border-color: var(--docs-line);
-}
 .parse_error{
   padding: 32px;
   color: #ff6b6b;
@@ -66,8 +20,10 @@
   font-family: "Blockblueprint";
 }
 .doc-content{
-  flex: 1; 
+  flex: 1;
+  min-height: 0; 
   overflow-y: auto;
+  padding-right: 8px;
 }
 .entire-doc-content{
   padding: 32px; 
@@ -111,6 +67,7 @@
   margin-top: 32px;
   display: flex;
   gap: 16px;
+  /* flex-shrink: 0; */
 }
 .markdown-button{
   padding: 12px 20px;

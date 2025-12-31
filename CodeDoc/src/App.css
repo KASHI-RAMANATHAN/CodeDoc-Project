@@ -45,6 +45,9 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-width 0.1s;
 }
+.convert-button{
+  opacity: 0;
+}
 .Doc-button{
     background-color: rgb(97, 170, 101);
     color: rgb(255, 252 , 225);
@@ -79,6 +82,10 @@
     height: 600px;
     border-radius: 41px;
     box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: rgb(59, 59, 59) transparent;
+    scrollbar-width: none;
 }
 .editor-heading{
     font-family: "Blockblueprint";
@@ -88,19 +95,6 @@
 
 .docmode-container,
 .liveMode-container {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: rgb(255, 135, 9) transparent;
 }
-.liveMode-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.liveMode-container::-webkit-scrollbar-track {
-  background: transparent;              
-}
-
-.liveMode-container::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 135, 9);   
-  border-radius: 999px;                 
-}
-
