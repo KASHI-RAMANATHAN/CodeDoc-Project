@@ -73,10 +73,13 @@ export function LivePane({ value }) {
                     <LivePreview
                         style={{
                             padding: "1rem",
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
+                            width: "100%",
+                            // height: "100%",
+                            minHeight: "100%",
+                            // display: "flex",
+                            display: "block",
+                            // alignItems: "center",
+                            // justifyContent: "center",
                             color: "#FFFCE1",
                         }}
                     />

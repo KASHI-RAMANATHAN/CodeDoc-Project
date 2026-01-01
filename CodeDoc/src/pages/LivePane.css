@@ -42,7 +42,11 @@
   margin-inline: auto;  /* for centering */
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  scrollbar-color: rgb(59, 59, 59) transparent;
+  scrollbar-width: none;
 }

@@ -3,18 +3,19 @@ import "./HomePage.css"
 
 export function HomePage(){
     const [blink,set_blink] = useState(false)
-    const blinker = ()=>{
-        if(blink){
-            set_blink(false)
-        }
-        else{
-            set_blink(true)
-        }
-    }
+    // const blinker = ()=>{
+    //     if(blink){
+    //         set_blink(false)
+    //     }
+    //     else{
+    //         set_blink(true)
+    //     }
+    // }
     useEffect(()=>{
         const interval = setInterval(()=>{
-            blinker();
-        },530)
+            // blinker();
+            set_blink((prev) => !prev)
+        },630)
     },[]);
 
     return(
@@ -65,7 +66,7 @@ export function HomePage(){
                             <span style={{color:'#E879F9', fontWeight:'700'}}> CodeDoc</span>.
                         </div>
 
-                        <div className="cursor" onLoad={blinker} style={{opacity: blink ? 1:0}}></div>
+                        <div className="cursor" style={{opacity: blink ? 1:0}}></div>
                     </div>
                 </div>
             </div>
