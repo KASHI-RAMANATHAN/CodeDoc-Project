@@ -1,0 +1,124 @@
+/* @import url('/fonts/Blockblueprint-LV7z5.ttf'); */
+@font-face {
+    font-family: Blockblueprint;
+    src: url("/fonts/Blockblueprint-LV7z5.ttf");
+}
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    /* border-style: solid;
+    border-width: 0.5px;
+    border-color: azure;
+    border-radius: 8px; */
+    padding: 8px 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+.logo{
+    width: 50px;
+    object-fit: contain;
+}
+.CodeDoc{
+    font-family: "Blockblueprint";
+    font-size: 40px;
+    color: rgb(255, 252 , 225);
+    margin: auto;
+    margin-top: 50px;
+}
+.Brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 200px;
+    gap: 1rem;
+}
+.console{
+    background-color: black;
+    border-style: solid;
+    border-color: rgba(255, 252 , 225, 0.1);
+    border-width: 0.5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px 20px;
+    margin: 30px 20px;
+}
+.heading{
+    font-family: "Blockblueprint";
+    font-size: 30px;
+    color: #61aa65;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s;
+}
+.name,
+.MyName{
+    font-family: "Blockblueprint";
+    color: rgb(255, 252 , 225);
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+}
+.name{
+    color: #FFDE59;
+}
+.content{
+    font-family: "Blockblueprint";
+    font-size: 19px;
+    color: rgb(255, 252 , 225);
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.cursor{
+    background-color: rgb(255, 252 , 225);
+    width: 3px;
+    height: 14px;
+    display: inline-block;
+    /* animation: blink 1s step-end infinite; */
+}
+.what-is-it{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    
+}
+.heading1{
+    font-family: "Blockblueprint";
+    font-size: 30px;
+    color: rgb(255, 252 , 225);
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 4.5s;
+}
+.answer{
+    border-radius: 15px;
+    /* background-color:#28292A; */
+    background-color: black;
+    color: rgb(255, 252 , 225);
+    font-family: "Blockblueprint";
+    padding: 20px 20px;
+    font-size: 19px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 5.5s; 
+}

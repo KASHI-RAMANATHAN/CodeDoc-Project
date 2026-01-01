@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CodeDoc|Homepage</title>
+        <style>
+            body{
+                background-color: rgb(14, 16, 15);
+            }
+            p{
+                margin: 0;
+                /* margin-bottom: 5px; */
+            }
+            @font-face {
+                font-family: Blockblueprint;
+                src: url("/CodeDoc/public/fonts/Blockblueprint-LV7z5.ttf");
+            }
+            .Header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 500px;
+                /* border-style: solid;
+                border-width: 0.5px;
+                border-color: azure;
+                border-radius: 8px; */
+                padding: 8px 10px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .logo{
+                width: 50px;
+                object-fit: contain;
+            }
+            .CodeDoc{
+                font-family: "Blockblueprint";
+                font-size: 40px;
+                color: rgb(255, 252 , 225);
+                margin: auto;
+            }
+            .Brand{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 200px;
+                gap: 1rem;
+            }
+            .console{
+                background-color: black;
+                border-style: solid;
+                border-color: rgba(255, 252 , 225, 0.1);
+                border-width: 0.5px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 20px 20px;
+                margin: 30px 20px;
+            }
+            .heading{
+                font-family: "Blockblueprint";
+                font-size: 30px;
+                color: #61aa65;
+                margin: auto;
+                opacity: 0;
+                animation: fadeIn 1s ease-in forwards;
+                animation-delay: 0.5s;
+            }
+            .name,
+            .MyName{
+                font-family: "Blockblueprint";
+                color: rgb(255, 252 , 225);
+                font-size: 24px;
+                opacity: 0;
+                animation: fadeIn 1s ease-in forwards;
+                animation-delay: 2s;
+            }
+            .name{
+                color: #FFDE59;
+            }
+            .content{
+                max-width: 500px;
+                font-family: "Blockblueprint";
+                font-size: 19px;
+                color: rgb(255, 252 , 225);
+                display: flex;
+                opacity: 0;
+                animation: fadeIn 1s ease-in forwards;
+                animation-delay: 3.5s;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            .cursor{
+                background-color: rgb(255, 252 , 225);
+                width: 3px;
+                height: 14px;
+                display: inline-block;
+                /* animation: blink 1s step-end infinite; */
+            }
+            .what-is-it{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 1rem;
+                padding: 20px 20px;
+                margin: 30px 20px;
+                
+            }
+            .heading1{
+                font-family: "Blockblueprint";
+                font-size: 30px;
+                color: rgb(255, 252 , 225);
+                animation: fadeIn 1s ease-in forwards;
+                animation-delay: 4.5s;
+            }
+            .answer{
+                border-radius: 15px;
+                /* background-color:#28292A; */
+                background-color: black;
+                color: rgb(255, 252 , 225);
+                font-family: "Blockblueprint";
+                padding: 20px 20px;
+                font-size: 19px;
+                opacity: 0;
+                animation: fadeIn 1s ease-in forwards;
+                animation-delay: 5.5s; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Header">
+            <!-- <div class="Brand">
+                <img src="./CodeDoc/public/logo.svg" class="logo">
+                <p class="CodeDoc">CodeDoc</p>
+            </div> -->
+            <p class="CodeDoc">> CodeDoc_</p>
+        </div>
+        <div class="console">
+            <div class="heading">>booting up...</div>
+            <div class="MyName">Hello World ! My name is <span class="name">Kashi Ramanathan Valliappa</span></div>
+            <div class="content">
+                <div class="cont">
+                    <!-- I'm an <span style="color: #5DCBFE;">engineering student</span> who is passionate to build things that engineered
+                    and not generated but with a bit of help from llm's ;), I juggle a lot of things but I make
+                    sure I juggle them all properly, I'm determined to comlete a quest I have started, I created another
+                    site which is a payment portal, so working with the current tech stack , has made me much stronger in frontend whilst 
+                    i'm still working on my backend skills, I hope you enjoy CodeDoc -->
+                    <p>
+                        I'm an <span style="color:#22D3EE; font-weight:600;">engineering student</span> who is
+                        <span style="color:#A78BFA; font-weight:600;">passionate to build things that are engineered</span>
+                        and not generated — but with a bit of help from
+                        <span style="color:#FACC15;">LLMs ;)</span>.
+                    </p>
+
+                    <p>
+                        I <span style="color:#34D399;">juggle a lot of things</span>, but I make sure I juggle them
+                        <span style="color:#60A5FA;">properly</span>.
+                    </p>
+
+                    <p>
+                        I'm <span style="color:#FB7185; font-weight:600;">determined to complete a quest</span> I have started.
+                    </p>
+
+                    <p>
+                        I created another site which is a
+                        <span style="color:#F97316; font-weight:600;">payment portal</span>, and working with the
+                        <span style="color:#38BDF8;">current tech stack</span> has made me much stronger in
+                        <span style="color:#4ADE80; font-weight:600;">frontend development</span>,
+                        while I continue sharpening my
+                        <span style="color:#C084FC;">backend skills</span>.
+                    </p>
+
+                    <p>
+                        I hope you enjoy
+                        <span style="color:#E879F9; font-weight:700;">CodeDoc</span>.
+                    </p>
+
+                    <div class="cursor"></div>
+                </div>
+            </div>
+        </div>
+        <div class="what-is-it">
+            <div class="heading1">What is CodeDoc ?</div>
+            <div class="answer">
+                CodeDoc is a <span style="color: #5DCBFE;">Code</span> to <span style="color: #C5869C;">Documentation</span> converter why is purely done
+                by <span style="color: #A4CEA8;">engineered parsing</span> using <span style="color: #F22C3D;">JavaScript</span> and <span style="color: #F22C3D;">not AI</span>, the React Components pasted
+                are converted into <span style="color:  #61aa65;">Documentation</span> with a <span style="color: #5DCBFE;">Downloadable link</span>.
+            </div>
+        </div>
+    </body>
+</html>
