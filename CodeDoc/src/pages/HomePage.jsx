@@ -15,7 +15,8 @@ export function HomePage(){
         const interval = setInterval(()=>{
             // blinker();
             set_blink((prev) => !prev)
-        },630)
+        },630);
+        return () => clearInterval(interval);
     },[]);
 
     return(
@@ -29,10 +30,10 @@ export function HomePage(){
             boxSizing: "border-box",
         }}>
             <div className="Header">
-                <p className="CodeDoc">>CodeDoc_</p>
+                <p className="CodeDoc">&gt;CodeDoc_</p>
             </div>
             <div className="console">
-                <div className="heading">>booting up...</div>
+                <div className="heading">&gt;booting up...</div>
                 <div className="MyName">Hello World ! My name is <span className="name">Kashi Ramanathan Valliappa</span></div>
                 <div className="content">
                     <div className="cont">

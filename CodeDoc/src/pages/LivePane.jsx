@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react'; 
 import './LivePane.css'
 import { LiveProvider, LiveError, LivePreview } from "react-live";
+import { getComponentName } from "../utils/parseComponent";
 
 const scope = { useState, React };
 
@@ -15,36 +16,7 @@ export function LivePane({ value }) {
     }
 
 
-    // for export default function()
-    const exportFnMatch = value.match(
-    /export\s+default\s+function\s+([A-Z][A-Za-z0-9_]*)/
-    );
-
-    // for just function()
-    const plainFnMatch = value.match(
-    /function\s+([A-Z][A-Za-z0-9_]*)/
-    );
-
-    // for const variable = (...)=>{...}
-    const constFnMatch = value.match(
-    /const\s+([A-Z][A-Za-z0-9_]*)\s*=\s*\(/
-    );
-
-    // && operator , like if plain function then cond 2 will work
-    // ie plainFnMatch[1] will be given to componentName
-    let componentName =
-    (exportFnMatch && exportFnMatch[1]) ||
-    (plainFnMatch && plainFnMatch[1]) ||
-    (constFnMatch && constFnMatch[1]) ||
-    null;
-
-    // this is for safety, if componentName returns null then this will execute
-    if (!componentName) {
-    const exportMatch = value.match(
-        /export\s+default\s+([A-Z][A-Za-z0-9_]*)/
-    );
-    componentName = exportMatch ? exportMatch[1] : 'Component';
-    }
+    const componentName = getComponentName(value) || 'Component';
 
 
     const cleanedCodeBody = value
