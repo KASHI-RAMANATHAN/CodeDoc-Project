@@ -1,10 +1,6 @@
 import { parse } from "@babel/parser";
 import traverse from "@babel/traverse";
 
-// This is the ORIGINAL parsing implementation, preserved verbatim as a
-// safe fallback. If the enhanced parser ever regresses, swap the import
-// in DocsPane over to `parseComponentLegacy` to restore the old behaviour.
-
 export function parseComponentLegacy(value) {
   let componentName = "No component found";
   let props = [];
