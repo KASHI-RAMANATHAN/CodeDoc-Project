@@ -1,4 +1,6 @@
 import Editor from "@monaco-editor/react"
+import { testComponents } from "../utils/testComponents"
+
 export function EditorPane({value, set_Value}){
     const saveChanges = (newValue)=>{
         console.log(newValue)
@@ -22,7 +24,29 @@ export function EditorPane({value, set_Value}){
     };
     return(
         <div className = "editor-pane">
-            <p className="editor-heading">Editor</p>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <p className="editor-heading">Editor</p>
+                <select 
+                  onChange={(e) => {
+                      if (e.target.value) set_Value(testComponents[e.target.value]);
+                  }}
+                  style={{
+                      marginRight: "10px",
+                      padding: "5px 10px",
+                      backgroundColor: "#1F2933",
+                      color: "#FFFCE1",
+                      border: "1px solid #333",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontFamily: "monospace"
+                  }}
+                >
+                    <option value="">Load a Test Component...</option>
+                    <option value="TerminalCommand">Terminal Command</option>
+                    <option value="CyberButton">Cyber Button</option>
+                    <option value="GlassCard">Glass Card</option>
+                </select>
+            </div>
             <div className="workspace">
                 <Editor 
                     height="100%" 
